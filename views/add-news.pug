@@ -1,0 +1,37 @@
+include index.pug
+form
+    div.m-3.form.field
+        label(for="name" class="form-label") Imię i nazwisko
+        input(type="text" class="form-control" id="name" placeholder="Imię i nazwisko")
+    div.m-3.form.field
+        label(for="date" class="form-label") Data dodania nowinek
+        input(type="date" class="form-control" id="date" placeholder="Data dodania nowinek")
+    div.m-3.form.field
+        label(for="news" class="form-label") Treść nowinek
+        textarea(type="text" class="form-control" id="news" placeholder="Treść nowinek" style="height: 500px")
+    div.m-3.form.field
+        label(for="description" class="form-label") Krótki opis nowinek, hasła tematyczne.
+        input(type="text" class="form-control" id="description" placeholder="Krótki opis, hasła tematyczne")
+    div.text-left.form.field
+        a(class="btn btn-outline-secondary obraz m-3" role="button") Dodaj obraz (link)
+        a(class="btn btn-outline-secondary video m-3" role="button") Dodaj video (link)
+        a(class="btn btn-outline-secondary link m-3" role="button") Dodaj link
+        a(class="btn btn-outline-secondary bold m-3" role="button") Dodaj pogrubienie
+        a(class="btn btn-outline-secondary emphasize m-3" role="button") Dodaj pochylenie
+        br
+    div(class="d-none gap-2 d md-flex justify-content-md-center m-3" id="password")
+        label(for="password" class="form-label") Podaj hasło do wysłania formularza
+        input(type="password" class="form-control" id="password-input" placeholder="Hasło")
+    div(class="d-none gap-2 d md-flex justify-content-md-center m-3" id="insert")
+        label(for="source-link" class="form-label") Podaj adres (źródło obrazu/video/odnośnika)
+        input(type="text" class="form-control" id="source-link" placeholder="Wstaw link")
+        label(for="source-title" class="form-label") Podaj nazwę/tytuł
+        input(type="text" class="form-control" id="source-title" placeholder="Wpisz nazwę/tytuł")
+        a(class="btn btn-secondary add-btn" role="button") Dodaj
+    div.d-grid.gap-2.d.md-flex.justify-content-md-end.m-3.form
+            button(id="submitBtn" class="btn btn-outline-secondary btn-lg form") Dodaj nowinki
+script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js") 
+script(src="/js/single-news.js") 
+script(src="/js/client.js") 
+script(src="/js/utils.js") 
+script(src="/js/add-news.js") 
